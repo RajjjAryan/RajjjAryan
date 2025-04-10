@@ -23,7 +23,7 @@ For a long time now, it has been me and my mug of coffee sitting together coding
 
 So, if you are wondering what is page is all about, it's my Portfolio. If that interests you, ping me and we can have a connect ;)  
 
-Professional Github - [RajjjAryan](https://github.com/RajjjAryan).
+Personal Github - [Raj2503](https://github.com/Raj2503).
   
 
 <br/>  
