@@ -22,12 +22,14 @@ jobs:
           filename: github-metrics.svg
           template: classic
           # Include a full-year contribution view and accurate aggregate counters.
-          base: header, repositories
+          # Render aggregates only: no private repository names in this public SVG.
+          base: header
           base_indepth: yes
+          base_hireable: yes
           repositories: 100
-          repositories_forks: no
-          repositories_affiliations: owner
+          repositories_forks: yes
+          repositories_affiliations: owner, collaborator, organization_member
           plugin_isocalendar: yes
           plugin_isocalendar_duration: full-year
-          config_order: base.header, isocalendar, base.repositories
+          config_order: base.header, isocalendar
           config_timezone: Asia/Kolkata
