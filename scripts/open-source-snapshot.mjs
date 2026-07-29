@@ -108,7 +108,7 @@ function renderCards(repositories) {
         ? `<title>${escapeXml(repository.description)}</title>`
         : "";
 
-      return `<a href="${escapeXml(repository.html_url)}"><g transform="translate(${x} ${y})">${description}<rect width="402" height="82" rx="10" fill="#111f36" stroke="#2a3c57"/><text x="16" y="29" fill="#f8fafc" font-size="16" font-weight="700">${escapeXml(repository.name)}</text><text x="386" y="29" fill="#67e8f9" font-size="11" text-anchor="end">${escapeXml(repository.account)}</text><text x="16" y="57" fill="#a9b8ca" font-size="12">${escapeXml(repository.language ?? "Unspecified")} · ★ ${repository.stargazers_count} · forks ${repository.forks_count}</text></g></a>`;
+      return `<a href="${escapeXml(repository.html_url)}"><g transform="translate(${x} ${y})">${description}<rect width="402" height="82" rx="10" fill="#111f36" stroke="#2a3c57"/><text x="16" y="29" fill="#f8fafc" font-family="Arial, sans-serif" font-size="16" font-weight="700">${escapeXml(repository.name)}</text><text x="386" y="29" fill="#67e8f9" font-family="Arial, sans-serif" font-size="11" text-anchor="end">${escapeXml(repository.account)}</text><text x="16" y="57" fill="#a9b8ca" font-family="Arial, sans-serif" font-size="12">${escapeXml(repository.language ?? "Unspecified")} · ★ ${repository.stargazers_count} · forks ${repository.forks_count}</text></g></a>`;
     })
     .join("");
 }
