@@ -1,11 +1,12 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import {readFile} from "node:fs/promises";
+import {readFile, rm, writeFile} from "node:fs/promises";
 import {
   aggregateRepositories,
   fetchAccountRepositories,
   renderSnapshot,
 } from "../scripts/open-source-snapshot.mjs";
+import {writeSnapshot} from "../scripts/generate-open-source-snapshot.mjs";
 
 const fixture = JSON.parse(
   await readFile(new URL("./fixtures/public-repositories.json", import.meta.url)),
@@ -99,4 +100,21 @@ test("rejects failed public GitHub requests", async () => {
       })),
     /GitHub API request failed/,
   );
+});
+
+test("preserves an existing asset when a required account fetch fails", async () => {
+  const output = new URL("./temporary-snapshot.svg", import.meta.url);
+  await writeFile(output, "previous-valid-svg");
+
+  await assert.rejects(
+    () =>
+      writeSnapshot({
+        output,
+        fetchImpl: async () => ({ok: false, status: 500}),
+      }),
+    /GitHub API request failed/,
+  );
+
+  assert.equal(await readFile(output, "utf8"), "previous-valid-svg");
+  await rm(output);
 });
