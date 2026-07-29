@@ -1,0 +1,32 @@
+name: Update open-source snapshot
+
+on:
+  schedule:
+    - cron: "23 6 * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/**"
+      - "test/**"
+      - ".github/workflows/update-open-source-snapshot.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: node --test test/open-source-snapshot.test.mjs
+      - run: node scripts/generate-open-source-snapshot.mjs
+      - run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add open-source-snapshot.svg
+          git diff --cached --quiet || git commit -m "chore: refresh open-source snapshot [skip ci]"
+          git push

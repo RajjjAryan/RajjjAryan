@@ -18,19 +18,10 @@ I build and operate high-throughput backend systems where latency, failure modes
 - [Retry Storm: How A Single User Crashed 30 ECS Tasks At Production](https://medium.com/@Rajjj/retry-storm-how-a-single-user-crashed-30-ecs-tasks-at-production-98c84c17331c)
 <!-- ENGINEERING-NOTES:END -->
 
-## GitHub activity
+## Open-source snapshot
 
-<!-- This SVG is generated daily by .github/workflows/metrics.yml. -->
-<img src="./github-metrics.svg" alt="GitHub contribution and repository metrics for Raj Aryan" width="480" />
+<a href="https://github.com/RajjjAryan?tab=repositories"><img src="./open-source-snapshot.svg" alt="Open-source snapshot showing Raj Aryan's verified public GitHub repositories across RajjjAryan and Raj2503" width="900" /></a>
 
-## Contribution arcade
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/RajjjAryan/RajjjAryan/output/pacman-contribution-graph-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/RajjjAryan/RajjjAryan/output/pacman-contribution-graph.svg">
-  <img alt="Pac-Man playing through Raj Aryan's GitHub contribution graph" src="https://raw.githubusercontent.com/RajjjAryan/RajjjAryan/output/pacman-contribution-graph.svg">
-</picture>
-
-<sub>Uses the contribution calendar GitHub provides to this account. Private repository names and code are never included; fork-only commits follow GitHub's contribution-credit rules.</sub>
+<sub>Public GitHub data from [RajjjAryan](https://github.com/RajjjAryan) and [Raj2503](https://github.com/Raj2503). Private activity and contribution totals are intentionally not shown.</sub>
 
 <sub>Interested in senior backend, platform, infrastructure, and selected architecture-review conversations.</sub>
