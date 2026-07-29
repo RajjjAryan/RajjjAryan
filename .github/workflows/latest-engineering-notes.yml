@@ -1,0 +1,25 @@
+name: Refresh latest engineering notes
+
+on:
+  # Medium publishes a public RSS feed; refresh the profile once a day.
+  schedule:
+    - cron: "23 6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-readme-with-medium:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      # The markers in README.md are intentionally named for this single RSS source.
+      - uses: gautamkrishnar/blog-post-workflow@v1
+        with:
+          comment_tag_name: ENGINEERING-NOTES
+          feed_list: "https://medium.com/feed/@Rajjj"
+          max_post_count: 5
+          template: "$newline- [$title]($url)"
+          gh_token: ${{ github.token }}
+          commit_message: "chore: refresh latest engineering notes"
