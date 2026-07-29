@@ -20,7 +20,7 @@ I build and operate high-throughput backend systems where latency, failure modes
 
 ## GitHub activity
 
-<!-- This SVG is generated weekly by .github/workflows/metrics.yml. -->
+<!-- This SVG is generated daily by .github/workflows/metrics.yml. -->
 <img src="./github-metrics.svg" alt="GitHub contribution and repository metrics for Raj Aryan" width="480" />
 
 <sub>Interested in senior backend, platform, infrastructure, and selected architecture-review conversations.</sub>

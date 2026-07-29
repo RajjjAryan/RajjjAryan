@@ -1,9 +1,9 @@
 name: Refresh profile metrics
 
 on:
-  # A weekly static refresh keeps the profile current without noisy commits.
+  # Contributions happen outside this repository, so refresh from GitHub daily.
   schedule:
-    - cron: "17 6 * * 1"
+    - cron: "17 6 * * *"
   workflow_dispatch:
 
 permissions:
@@ -21,9 +21,13 @@ jobs:
           user: RajjjAryan
           filename: github-metrics.svg
           template: classic
-          # Keep the generated card focused on contribution and owned-repository context.
+          # Include a full-year contribution view and accurate aggregate counters.
           base: header, repositories
-          repositories: 20
+          base_indepth: yes
+          repositories: 100
           repositories_forks: no
           repositories_affiliations: owner
+          plugin_isocalendar: yes
+          plugin_isocalendar_duration: full-year
+          config_order: base.header, isocalendar, base.repositories
           config_timezone: Asia/Kolkata
