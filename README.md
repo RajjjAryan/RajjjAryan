@@ -14,9 +14,8 @@ I build and operate high-throughput backend systems where latency, failure modes
 ## Latest engineering notes
 
 <!-- ENGINEERING-NOTES:START -->
-- [When Apache Solr’s Replication Handler Went Rogue: Production Debugging Story](https://medium.com/@Rajjj/when-apache-solrs-replication-handler-went-rogue-production-debugging-story-6f61cc25acf0)
-- [Retry Storm: How A Single User Crashed 30 ECS Tasks At Production](https://medium.com/@Rajjj/retry-storm-how-a-single-user-crashed-30-ecs-tasks-at-production-98c84c17331c)
-<!-- ENGINEERING-NOTES:END -->
+- [When Apache Solr’s Replication Handler Went Rogue: Production Debugging Story](https://medium.com/@Rajjj/when-apache-solrs-replication-handler-went-rogue-production-debugging-story-6f61cc25acf0?source=rss-421194ab2da6------2)
+- [Retry Storm: How A Single User Crashed 30 ECS Tasks At Production](https://medium.com/@Rajjj/retry-storm-how-a-single-user-crashed-30-ecs-tasks-at-production-98c84c17331c?source=rss-421194ab2da6------2)<!-- ENGINEERING-NOTES:END -->
 
 ## Open-source snapshot
 
